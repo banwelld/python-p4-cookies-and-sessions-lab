@@ -1,17 +1,20 @@
-import { Switch, Route } from "react-router-dom";
-import Article from "./Article";
-import Header from "./Header";
-import Home from "./Home";
+import { Switch, Route } from 'react-router-dom';
+import Article from './Article';
+import Header from './Header';
+import Home from './Home';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
       <Switch>
-        <Route exact path="/articles/:id">
+        <Route exact path='/articles'>
+          <Home />
+        </Route>
+        <Route exact path='/articles/:id'>
           <Article />
         </Route>
-        <Route exact path="/">
+        <Route exact path='/'>
           <Home />
         </Route>
       </Switch>
